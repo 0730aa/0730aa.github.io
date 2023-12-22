@@ -6,7 +6,7 @@
   <link href="https://0730aa.github.io/atom.xml" rel="self"/>
   
   <link href="https://0730aa.github.io/"/>
-  <updated>2023-12-22T12:40:12.561Z</updated>
+  <updated>2023-12-22T14:00:15.754Z</updated>
   <id>https://0730aa.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test1</title>
+    <link href="https://0730aa.github.io/2023/12/22/test1/"/>
+    <id>https://0730aa.github.io/2023/12/22/test1/</id>
+    <published>2023-12-22T13:55:14.000Z</published>
+    <updated>2023-12-22T14:00:15.754Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这里放一张图片看看"><a href="#这里放一张图片看看" class="headerlink" title="这里放一张图片看看"></a>这里放一张图片看看</h1><p><img src="/image.png" alt="Alt text"></p><h1 id="第二"><a href="#第二" class="headerlink" title="第二"></a>第二</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;这里放一张图片看看&quot;&gt;&lt;a href=&quot;#这里放一张图片看看&quot; class=&quot;headerlink&quot; title=&quot;这里放一张图片看看&quot;&gt;&lt;/a&gt;这里放一张图片看看&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/image.png&quot; alt=&quot;Alt text&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="这是一个标签" scheme="https://0730aa.github.io/tags/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
