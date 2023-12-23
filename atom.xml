@@ -17,6 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker 容器一键搭建 Gemini pro</title>
+    <link href="https://0730aa.github.io/2023/12/23/test3/"/>
+    <id>https://0730aa.github.io/2023/12/23/test3/</id>
+    <published>2023-12-23T12:39:47.885Z</published>
+    <updated>2023-12-22T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="docker-执行命令"><a href="#docker-执行命令" class="headerlink" title="docker 执行命令"></a>docker 执行命令</h1><p>docker run –name geminiprochat <br>–restart always <br>-p 3030:3000 <br>-itd <br>-e GEMINI_API_KEY&#x3D;你的api值 <br>howie6879&#x2F;geminiprochat:v0.1.0<br>直接把上面的代码复制到已经安装 docker 的机器<br>记得在服务器配置放行 3030 端口<br>如果你是国内服务器搭建，则搭建完成后访问会出现访问失败等情况，如下<br><img src="https://cdn.jsdelivr.net/gh/0730aa/images/20231223203838.png" alt="1"></p><h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="https://cdn.jsdelivr.net/gh/0730aa/images/20231223204257.png" alt="2"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;docker-执行命令&quot;&gt;&lt;a href=&quot;#docker-执行命令&quot; class=&quot;headerlink&quot; title=&quot;docker 执行命令&quot;&gt;&lt;/a&gt;docker 执行命令&lt;/h1&gt;&lt;p&gt;docker run –name geminiprochat &lt;br</summary>
+      
+    
+    
+    
+    <category term="教程分享" scheme="https://0730aa.github.io/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="docker" scheme="https://0730aa.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>iqoou3x 线刷包/救砖包/刷机包/降级包，全网唯一</title>
     <link href="https://0730aa.github.io/2023/12/23/test2/"/>
     <id>https://0730aa.github.io/2023/12/23/test2/</id>
