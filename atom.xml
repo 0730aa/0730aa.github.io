@@ -23,12 +23,12 @@
     <published>2023-12-23T12:39:47.885Z</published>
     <updated>2023-12-22T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="docker-执行命令"><a href="#docker-执行命令" class="headerlink" title="docker 执行命令"></a>docker 执行命令</h1><pre><code>docker run --name geminiprochat \--restart always \-p 3030:3000 \-itd \-e GEMINI_API_KEY=你的api值 \howie6879/geminiprochat:v0.1.0</code></pre><ol><li>直接把上面的代码复制到已经安装 docker 的机器<br>记得在服务器配置放行 3030 端口</li></ol><ul><li>如果你是国内服务器搭建，则搭建完成后访问会出现访问失败等情况，如下<br><img src="https://cdn.jsdelivr.net/gh/0730aa/images/20231223203838.png" alt="1"></li></ul><h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="https://cdn.jsdelivr.net/gh/0730aa/images/20231223204257.png" alt="2"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="docker-执行命令"><a href="#docker-执行命令" class="headerlink" title="docker 执行命令"></a>docker 执行命令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run --name geminiprochat \</span><br><span class="line">--restart always \</span><br><span class="line">-p 3030:3000 \</span><br><span class="line">-itd \</span><br><span class="line">-e GEMINI_API_KEY=你的api值 \</span><br><span class="line">howie6879/geminiprochat:v0.1.0</span><br></pre></td></tr></table></figure><ol><li>直接把上面的代码复制到已经安装 docker 的机器<br>记得在服务器配置放行 3030 端口</li></ol><ul><li>如果你是国内服务器搭建，则搭建完成后访问会出现访问失败等情况，如下<br><img src="https://cdn.jsdelivr.net/gh/0730aa/images/20231223203838.png" alt="1"></li></ul><h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p><img src="https://cdn.jsdelivr.net/gh/0730aa/images/20231223204257.png" alt="2"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;docker-执行命令&quot;&gt;&lt;a href=&quot;#docker-执行命令&quot; class=&quot;headerlink&quot; title=&quot;docker 执行命令&quot;&gt;&lt;/a&gt;docker 执行命令&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;docker run --name geminipr</summary>
+    <summary type="html">&lt;h1 id=&quot;docker-执行命令&quot;&gt;&lt;a href=&quot;#docker-执行命令&quot; class=&quot;headerlink&quot; title=&quot;docker 执行命令&quot;&gt;&lt;/a&gt;docker 执行命令&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;</summary>
       
     
     
