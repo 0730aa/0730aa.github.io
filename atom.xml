@@ -6,7 +6,7 @@
   <link href="https://0730aa.github.io/atom.xml" rel="self"/>
   
   <link href="https://0730aa.github.io/"/>
-  <updated>2023-12-29T16:00:00.000Z</updated>
+  <updated>2023-12-30T16:00:00.000Z</updated>
   <id>https://0730aa.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://0730aa.github.io/2023/12/30/idm/"/>
     <id>https://0730aa.github.io/2023/12/30/idm/</id>
     <published>2023-12-30T03:18:21.483Z</published>
-    <updated>2023-12-29T16:00:00.000Z</updated>
+    <updated>2023-12-30T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="下载-idm"><a href="#下载-idm" class="headerlink" title="下载 idm"></a>下载 idm</h1><ul><li>首先从官网下载IDM并安装：<br><a href="https://www.internetdownloadmanager.com/">https://www.internetdownloadmanager.com</a></li><li>建议安装在 c 盘，要不然 IE 浏览器可能加载不了扩展<br>安装完成后可以看到 EDGE浏览器 的扩展里已经自动装上去了<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/idm" alt="3"></li></ul><h1 id="下载-idm-激活工具"><a href="#下载-idm-激活工具" class="headerlink" title="下载 idm 激活工具"></a>下载 idm 激活工具</h1><p>下载后解压，并运行 IAS_0.8_cn.cmd<br>输入 3 先把防火墙关了，出现 disabled 就是已经处于关闭状态<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/1244" alt="4"><br>接着输入 1 激活 idm 即可<br>等程序跑完之后打开 idm 点击 注册，发现<strong>本软件已注册</strong><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/20231230125052.png" alt="5"><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/20231230125111.png" alt="6"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="下载-idm"><a href="#下载-idm" class="headerlink" title="下载 idm"></a>下载 idm</h1><ul><li>首先从官网下载IDM并安装：<br><a href="https://www.internetdownloadmanager.com/">https://www.internetdownloadmanager.com</a></li><li>建议安装在 c 盘，要不然 IE 浏览器可能加载不了扩展<br>安装完成后可以看到 EDGE浏览器 的扩展里已经自动装上去了<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/idm" alt="3"></li></ul><h1 id="下载-idm-激活工具"><a href="#下载-idm-激活工具" class="headerlink" title="下载 idm 激活工具"></a>下载 idm 激活工具</h1><ul><li>下载地址：<br><a href="https://github.com/0730aa/Personal-repositories/blob/f734be8dadff32c47f75b8e428b8ac60dcd65ba9/window%E8%BD%AF%E4%BB%B6/IDM-Activation-Script-zh-cn.zip">https://github.com/0730aa/Personal-repositories/blob/f734be8dadff32c47f75b8e428b8ac60dcd65ba9/window%E8%BD%AF%E4%BB%B6/IDM-Activation-Script-zh-cn.zip</a></li></ul><p>点击右上角三个点，然后选择 download 即可下载完整压缩包<br>      <img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/2023-12-31%20092619.png" alt="7"></p><ul><li>下载后解压，并运行 IAS_0.8_cn.cmd<br>输入 3 先把防火墙关了，出现 disabled 就是已经处于关闭状态<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/1244" alt="4"><br>接着输入 1 激活 idm 即可<br>等程序跑完之后打开 idm 点击 注册，发现<strong>本软件已注册</strong><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/20231230125052.png" alt="5"><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/20231230125111.png" alt="6"></li></ul>]]></content>
     
     
       
