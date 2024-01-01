@@ -6,7 +6,7 @@
   <link href="https://0730aa.github.io/atom.xml" rel="self"/>
   
   <link href="https://0730aa.github.io/"/>
-  <updated>2023-12-30T16:00:00.000Z</updated>
+  <updated>2023-12-31T16:00:00.000Z</updated>
   <id>https://0730aa.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Microsoft 365 E5开发者发邮件失败以及SMTP无法发送</title>
+    <link href="https://0730aa.github.io/2024/01/01/E5/"/>
+    <id>https://0730aa.github.io/2024/01/01/E5/</id>
+    <published>2024-01-01T05:37:18.674Z</published>
+    <updated>2023-12-31T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简单述说一下我的经历"><a href="#简单述说一下我的经历" class="headerlink" title="简单述说一下我的经历"></a>简单述说一下我的经历</h1><ul><li>不知道你们在申请完 Microsoft 365 E5 开发者账号的时候，有没有出现发邮件失败的情况，就是我刚刚申请完不久，在发了几封邮件之后就被拒绝发送了，一发送就显示 Your message wasn’t delivered because the recipient’s email provider rejected it.<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/20240101134606.png" alt="无法送达"></li><li>于是我开始网上搜索一些原因（在此之前已经把双重认证已经安全默认值之类全关了），搜了半天竟然没有类似文章，离我意思最近的文章就是 smtp 服务发送不了邮件</li><li>那篇文章有写道通过反馈客服可以解决这件事，于是我心急如焚的也去申请了一次工单，然后收到回复最后结果说也是跟他差不多，由于 ip 不被 微软认可，于是就限制你发邮件。（期间还让他赶上他的两天假期，真是越急越慢）<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2023/December/20240101135859.png" alt="解锁ip和域名"></li><li>在微软客服帮我释放 ip 和 域名 后，我尝试了一下发送邮件，发现确实又可以发送了</li><li>刚用没几天，又发送失败<br>This message couldn’t be delivered because the sending email address was not recognized as a valid sender. The most common reason for this error is that the email address is, or was, suspected of sending spam. Contact the organization’s email admin for help and give them this error message.<br>于是我开始尝试使用 smtp 发送看看行不行，发现同样不行，于是两个问题一起发工单<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101141320.png" alt="两次工单记录"><br>这次工单可以说差不多彻底解决了（为什么说差不多，后面再细说），通过微软客服的回信，我知道了要去管理员的安全中心解除风险限制<br>这是第二次工单客服回信<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101152057.png" alt="客服回信"></li></ul><ol><li>首先打开管理员管理中心，点击显示全部，找到<strong>安全</strong>，或者直接点击链接转到受限制实体界面：<br> <a href="https://security.microsoft.com/restrictedentities">https://security.microsoft.com/restrictedentities</a><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20141805.png" alt="安全中心"></li><li>接着往下拉找到 电子邮件和协作-<strong>回顾</strong>-右边点击<strong>受限制的实体</strong><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20150142.png" alt="受限制实体"></li><li>在<strong>受限实体</strong>页上，标识要取消阻止的用户帐户</li><li>选择要取消阻止的用户，在相关用户选择页面上有显示<strong>取消阻止</strong>操作，点击 取消阻止 即可，最后点击提交即可。由于我已经取消阻止很久了，现在没有记录了，所以这里就没有图片可以参考</li></ol><ul><li>正当我以为终于结束的时候，发现当天成功发了几条邮件后，又被限制了，真的无语。于是便自己摸索着那个安全中心，这不，功夫不负有心人，终于找到跟限制发邮件相关的政策规则</li></ul><ol><li>还是刚刚那个地方，管理员安全中心-电子邮件和协作-<strong>政策与规则</strong>-右边点击<strong>威胁策略</strong>或者直接转到直达链接：<br><a href="https://security.microsoft.com/antispam">https://security.microsoft.com/antispam</a><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20152822.png" alt="威胁策略"></li><li>下滑找到<strong>反垃圾邮件策略</strong><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101153354.png" alt="反垃圾邮件"></li><li>点击反垃圾邮件出站设置，再点右下角的编辑保护设置，把<br>限制向外部收件人发送（每小时）设置为最大值10000条<br>限制向内部收件人发送（每小时）设置为最大值10000条<br>每天的最大收件人限制设置为最大值10000条<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20153510.png" alt="出站设置"><br>至于入站的话你想改就改，可以帮你拦截一些垃圾邮件，不改保持默认也可以</li></ol><ul><li>在经过修改这个威胁政策之后，终于可以正常收发邮件了，一天发几百条都没问题， smtp 服务也没问题（前提你得打开管理用户的smtp服务才行）。</li><li><strong>smtp默认是关闭的</strong>，<strong>smtp默认是关闭的</strong>，<strong>smtp默认是关闭的</strong>，重要事情说三遍<br>打开他需要在用户中心-活跃用户-邮箱-管理邮箱应用那里选上 smtp 保存后才可以使用 smtp<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101154803.png" alt="smtp开启"><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20155154.png" alt="smtp"></li><li>你以为一切就这样结束了？在愉快的使用十几天后，又发现 SMTP 被限制了（使用 smsforward 软件和青龙面板接收通知）<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101160022.png" alt="sms报错"><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101160059.png" alt="青龙报错"><br>于是，我又再次联系客服，原来是安全多重身份被<strong>强制执行</strong>了<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101160539.png" alt="强制启用"><br>smtp突然用不了一定要先看看多重验证是不是被强制启用了，在客服联系我的时候，我还不相信，因为我已经把安全默认值以及双重验证全关了。后面猛然回想起来前段时间还真绑定了一个手机号，应该就是这个原因才导致被强制执行<br> 可以在活跃用户的 管理用户-多因素身份验证 那里把他关了<br> <img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101161313.png" alt="多因素身份验证"><br> <img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101162522.png" alt="关闭双重验证"><br>当然前提是你得关闭安全默认值，在<strong>属性</strong>那里可以找到，关闭地址：<a href="https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView?Microsoft_AAD_IAM_legacyAADRedirect=true">https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView?Microsoft_AAD_IAM_legacyAADRedirect=true</a><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101161520.png" alt="管理安全默认值"></li></ul><h1 id="总结一下解决步骤"><a href="#总结一下解决步骤" class="headerlink" title="总结一下解决步骤"></a>总结一下解决步骤</h1><p><strong>一、取消阻止发邮件的用户</strong></p><ol><li>首先打开管理员管理中心，点击显示全部，找到<strong>安全</strong>，或者直接点击链接转到受限制实体界面：<br> <a href="https://security.microsoft.com/restrictedentities">https://security.microsoft.com/restrictedentities</a><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20141805.png" alt="安全中心"></li><li>接着往下拉找到 电子邮件和协作-<strong>回顾</strong>-右边点击<strong>受限制的实体</strong><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20150142.png" alt="受限制实体"></li><li>在<strong>受限实体</strong>页上，标识要取消阻止的用户帐户</li><li>选择要取消阻止的用户，在相关用户选择页面上有显示<strong>取消阻止</strong>操作，点击 取消阻止 即可，最后点击提交即可。<br><strong>二、修改威胁规则</strong></li><li>还是上面那个地方，管理员安全中心-电子邮件和协作-<strong>政策与规则</strong>-右边点击<strong>威胁策略</strong>或者直接转到直达链接：<br><a href="https://security.microsoft.com/antispam">https://security.microsoft.com/antispam</a><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20152822.png" alt="威胁策略"></li><li>下滑找到<strong>反垃圾邮件策略</strong><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101153354.png" alt="反垃圾邮件"></li><li>点击反垃圾邮件出站设置，再点右下角的编辑保护设置，把<br>限制向外部收件人发送（每小时）设置为最大值10000条<br>限制向内部收件人发送（每小时）设置为最大值10000条<br>每天的最大收件人限制设置为最大值10000条<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/2024-01-01%20153510.png" alt="出站设置"><br><strong>三、SMTP发送邮件失败解决方式</strong><br>在活跃用户的 管理用户-多因素身份验证 在那里把双重验证关了<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101161313.png" alt="多因素身份验证"><br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101160539.png" alt="强制启用"><br>把强制执行改成禁用<br><img src="https://raw.githubusercontent.com/0730aa/images/remain/2024/January/20240101162522.png" alt="禁用"><br>最后记得关安全默认值就行</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;简单述说一下我的经历&quot;&gt;&lt;a href=&quot;#简单述说一下我的经历&quot; class=&quot;headerlink&quot; title=&quot;简单述说一下我的经历&quot;&gt;&lt;/a&gt;简单述说一下我的经历&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;不知道你们在申请完 Microsoft 365 E5 开发者账号</summary>
+      
+    
+    
+    
+    <category term="教程分享" scheme="https://0730aa.github.io/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="E5" scheme="https://0730aa.github.io/tags/E5/"/>
+    
+  </entry>
   
   <entry>
     <title>IDM使用方法，一个window最佳下载器</title>
