@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://0730aa.github.io/2023/12/23/test2/</loc>
+    
+    <lastmod>2024-01-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://0730aa.github.io/2023/12/25/alpha1/</loc>
     
     <lastmod>2024-01-01</lastmod>
@@ -84,15 +93,6 @@
   
   <url>
     <loc>https://0730aa.github.io/2023/12/22/test1/</loc>
-    
-    <lastmod>2023-12-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://0730aa.github.io/2023/12/23/test2/</loc>
     
     <lastmod>2023-12-22</lastmod>
     

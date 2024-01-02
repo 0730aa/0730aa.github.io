@@ -1,4 +1,5 @@
 https://0730aa.github.io/2023/12/24/beta1/
+https://0730aa.github.io/2023/12/23/test2/
 https://0730aa.github.io/2023/12/25/alpha1/
 https://0730aa.github.io/2023/12/26/zhongyao/
 https://0730aa.github.io/2024/01/01/E5/
@@ -8,7 +9,6 @@ https://0730aa.github.io/2023/12/23/test3/
 https://0730aa.github.io/tags/index.html
 https://0730aa.github.io/categories/index.html
 https://0730aa.github.io/2023/12/22/test1/
-https://0730aa.github.io/2023/12/23/test2/
 https://0730aa.github.io/2023/12/22/hello-world/
 https://0730aa.github.io/
 https://0730aa.github.io/tags/qinglong/
