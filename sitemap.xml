@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://0730aa.github.io/2023/12/24/beta1/</loc>
+    
+    <lastmod>2024-01-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://0730aa.github.io/2023/12/25/alpha1/</loc>
     
     <lastmod>2024-01-01</lastmod>
@@ -50,15 +59,6 @@
     <loc>https://0730aa.github.io/2023/12/26/zhongyao/</loc>
     
     <lastmod>2023-12-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://0730aa.github.io/2023/12/24/beta1/</loc>
-    
-    <lastmod>2023-12-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -169,6 +169,13 @@
   
   <url>
     <loc>https://0730aa.github.io/tags/E5/</loc>
+    <lastmod>2024-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://0730aa.github.io/tags/%E9%9D%92%E9%BE%99/</loc>
     <lastmod>2024-01-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
