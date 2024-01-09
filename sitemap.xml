@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://0730aa.github.io/2024/01/09/xianliao/</loc>
+    
+    <lastmod>2024-01-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://0730aa.github.io/2024/01/08/10010v4/</loc>
     
     <lastmod>2024-01-07</lastmod>
@@ -210,6 +219,13 @@
   
   <url>
     <loc>https://0730aa.github.io/tags/%E5%93%81%E9%85%92/</loc>
+    <lastmod>2024-01-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://0730aa.github.io/tags/%E5%95%86%E6%88%B7/</loc>
     <lastmod>2024-01-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
