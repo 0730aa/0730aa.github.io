@@ -17,6 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker 常用命令合集（持续更新）</title>
+    <link href="https://0730aa.github.io/2024/01/13/docker/"/>
+    <id>https://0730aa.github.io/2024/01/13/docker/</id>
+    <published>2024-01-13T12:55:16.490Z</published>
+    <updated>2024-01-12T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="快速更新全部容器"><a href="#快速更新全部容器" class="headerlink" title="快速更新全部容器"></a>快速更新全部容器</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower</span><br></pre></td></tr></table></figure><h2 id="指定更新容器-NAMES-1-NAMES-2-为容器名"><a href="#指定更新容器-NAMES-1-NAMES-2-为容器名" class="headerlink" title="指定更新容器,NAMES.1 NAMES.2 为容器名"></a>指定更新容器,NAMES.1 NAMES.2 为容器名</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower NAMES.1 NAMES.2</span><br></pre></td></tr></table></figure><h3 id="Watch­tower运行一次就自动退出容器"><a href="#Watch­tower运行一次就自动退出容器" class="headerlink" title="Watch­tower运行一次就自动退出容器"></a>Watch­tower运行一次就自动退出容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once NAMES.1</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;快速更新全部容器&quot;&gt;&lt;a href=&quot;#快速更新全部容器&quot; class=&quot;headerlink&quot; title=&quot;快速更新全部容器&quot;&gt;&lt;/a&gt;快速更新全部容器&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;t</summary>
+      
+    
+    
+    
+    <category term="教程分享" scheme="https://0730aa.github.io/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="docker" scheme="https://0730aa.github.io/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于营业执照（持续更新）</title>
     <link href="https://0730aa.github.io/2024/01/09/xianliao/"/>
     <id>https://0730aa.github.io/2024/01/09/xianliao/</id>
