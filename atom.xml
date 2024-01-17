@@ -6,7 +6,7 @@
   <link href="https://0730aa.github.io/atom.xml" rel="self"/>
   
   <link href="https://0730aa.github.io/"/>
-  <updated>2024-01-12T16:00:00.000Z</updated>
+  <updated>2024-01-16T16:00:00.000Z</updated>
   <id>https://0730aa.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://0730aa.github.io/2024/01/13/docker/"/>
     <id>https://0730aa.github.io/2024/01/13/docker/</id>
     <published>2024-01-13T12:55:16.490Z</published>
-    <updated>2024-01-12T16:00:00.000Z</updated>
+    <updated>2024-01-16T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="快速更新全部容器"><a href="#快速更新全部容器" class="headerlink" title="快速更新全部容器"></a>快速更新全部容器</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower</span><br></pre></td></tr></table></figure><h2 id="指定更新容器-NAMES-1-NAMES-2-为容器名"><a href="#指定更新容器-NAMES-1-NAMES-2-为容器名" class="headerlink" title="指定更新容器,NAMES.1 NAMES.2 为容器名"></a>指定更新容器,NAMES.1 NAMES.2 为容器名</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower NAMES.1 NAMES.2</span><br></pre></td></tr></table></figure><h3 id="更新时-Watch­tower-运行一次就自动退出容器"><a href="#更新时-Watch­tower-运行一次就自动退出容器" class="headerlink" title="更新时 Watch­tower 运行一次就自动退出容器"></a>更新时 Watch­tower 运行一次就自动退出容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once NAMES.1</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="快速更新全部容器"><a href="#快速更新全部容器" class="headerlink" title="快速更新全部容器"></a>快速更新全部容器</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower</span><br></pre></td></tr></table></figure><h2 id="指定更新容器-NAMES-1-NAMES-2-为容器名"><a href="#指定更新容器-NAMES-1-NAMES-2-为容器名" class="headerlink" title="指定更新容器,NAMES.1 NAMES.2 为容器名"></a>指定更新容器,NAMES.1 NAMES.2 为容器名</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower NAMES.1 NAMES.2</span><br></pre></td></tr></table></figure><h3 id="更新时-Watch­tower-运行一次就自动退出容器"><a href="#更新时-Watch­tower-运行一次就自动退出容器" class="headerlink" title="更新时 Watch­tower 运行一次就自动退出容器"></a>更新时 Watch­tower 运行一次就自动退出容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once NAMES.1</span><br></pre></td></tr></table></figure><h1 id="一键搭建-Gemini"><a href="#一键搭建-Gemini" class="headerlink" title="一键搭建 Gemini"></a>一键搭建 Gemini</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run --name geminiprochat \</span><br><span class="line">--restart always \</span><br><span class="line">-p 3030:3000 \</span><br><span class="line">-itd \</span><br><span class="line">-e GEMINI_API_KEY=你的api值 \</span><br><span class="line">howie6879/geminiprochat:v0.1.0</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
