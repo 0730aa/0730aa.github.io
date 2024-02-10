@@ -202,14 +202,14 @@
 <li><strong>smtp默认是关闭的</strong>，<strong>smtp默认是关闭的</strong>，<strong>smtp默认是关闭的</strong>，重要事情说三遍<br>打开他需要在用户中心-活跃用户-邮箱-管理邮箱应用那里选上 smtp 保存后才可以使用 smtp<br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101154803.png" alt="smtp开启"><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/2024-01-01%20155154.png" alt="smtp"></li>
 <li>你以为一切就这样结束了？在愉快的使用十几天后，又发现 SMTP 被限制了（使用 smsforward 软件和青龙面板接收通知）<br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101160022.png" alt="sms报错"><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101160059.png" alt="青龙报错"><br>于是，我又再次联系客服，原来是安全多重身份被<strong>强制执行</strong>了<br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101160539.png" alt="强制启用"><br>smtp突然用不了一定要先看看多重验证是不是被强制启用了，在客服联系我的时候，我还不相信，因为我已经把安全默认值以及双重验证全关了。后面猛然回想起来前段时间还真绑定了一个手机号，应该就是这个原因才导致被强制执行<br> 可以在活跃用户的 管理用户-多因素身份验证 那里把他关了<br> <img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101161313.png" alt="多因素身份验证"><br> <img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101162522.png" alt="关闭双重验证"><br>当然前提是你得关闭安全默认值，在<strong>属性</strong>那里可以找到，关闭地址：<a target="_blank" rel="noopener" href="https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView?Microsoft_AAD_IAM_legacyAADRedirect=true">https://entra.microsoft.com/#view/Microsoft_AAD_IAM/TenantOverview.ReactView?Microsoft_AAD_IAM_legacyAADRedirect=true</a><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101161520.png" alt="管理安全默认值"></li>
 </ul>
-<h1 id="总结解决步骤"><a href="#总结解决步骤" class="headerlink" title="总结解决步骤"></a>总结解决步骤</h1><p><strong>一. 取消阻止发邮件的用户</strong>（针对普通邮件无法发送，若想解决 smtp 请下滑看到第三点）</p>
+<h1 id="总结解决步骤"><a href="#总结解决步骤" class="headerlink" title="总结解决步骤"></a>总结解决步骤</h1><p><strong>一. 取消阻止发邮件的用户</strong>（<font color=#FF0000 size=4><b>针对普通邮件无法发送，若想解决 smtp 请下滑看到第三点</b></font>）</p>
 <ol>
 <li>首先打开管理员管理中心，点击显示全部，找到<strong>安全</strong>，或者直接点击链接转到受限制实体界面：<br><a target="_blank" rel="noopener" href="https://security.microsoft.com/restrictedentities">https://security.microsoft.com/restrictedentities</a><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/2024-01-01%20141805.png" alt="安全中心"></li>
 <li>接着往下拉找到 电子邮件和协作-<strong>回顾</strong>-右边点击<strong>受限制的实体</strong><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/2024-01-01%20150142.png" alt="受限制实体"></li>
 <li>在<strong>受限实体</strong>页上，标识要取消阻止的用户帐户</li>
 <li>选择要取消阻止的用户，在相关用户选择页面上有显示<strong>取消阻止</strong>操作，点击 取消阻止 即可，最后点击提交即可。</li>
 </ol>
-<p><strong>二. 修改威胁规则</strong>（针对普通邮件无法发送，若想解决 smtp 请下滑看到第三点）</p>
+<p><strong>二. 修改威胁规则</strong>（<font color=#FF0000 size=4><b>针对普通邮件无法发送，若想解决 smtp 请下滑看到第三点</b></font>）</p>
 <ol>
 <li>还是上面那个地方，管理员安全中心-电子邮件和协作-<strong>政策与规则</strong>-右边点击<strong>威胁策略</strong>或者直接转到直达链接：<br><a target="_blank" rel="noopener" href="https://security.microsoft.com/antispam">https://security.microsoft.com/antispam</a><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/2024-01-01%20152822.png" alt="威胁策略"></li>
 <li>下滑找到<strong>反垃圾邮件策略</strong><br><img src="https://cdn.jsdelivr.net/gh/0730aa/images@remain/2024/January/20240101153354.png" alt="反垃圾邮件"></li>
