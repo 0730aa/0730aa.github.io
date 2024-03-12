@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>网工错误指南</title>
+      <link href="/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/"/>
+      <url>/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="暂时还不分类"><a href="#暂时还不分类" class="headerlink" title="暂时还不分类"></a>暂时还不分类</h1><ol><li><font color=#FF0000 size=4><b>程序计数器（PC）—-存放下一条指令的地址</b></font></li><li>指令寄存器（IR）—-存放当前正在执行的指令</li><li>指令译码器———-分析指令中的操作码</li><li>时序部件————控制各部分之间的有序协调</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日常杂项 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网工 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vivo和iqoo小米红米骁龙天玑单刷基带教程，可修复插卡无信号，降级基带版本.保证锁频功能正常等</title>
       <link href="/2024/01/29/VivoIqoo/"/>
       <url>/2024/01/29/VivoIqoo/</url>

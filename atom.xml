@@ -6,7 +6,7 @@
   <link href="https://0730aa.github.io/atom.xml" rel="self"/>
   
   <link href="https://0730aa.github.io/"/>
-  <updated>2024-02-11T16:00:00.000Z</updated>
+  <updated>2024-03-12T16:00:00.000Z</updated>
   <id>https://0730aa.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网工错误指南</title>
+    <link href="https://0730aa.github.io/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/"/>
+    <id>https://0730aa.github.io/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/</id>
+    <published>2024-03-12T15:49:22.538Z</published>
+    <updated>2024-03-12T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="暂时还不分类"><a href="#暂时还不分类" class="headerlink" title="暂时还不分类"></a>暂时还不分类</h1><ol><li><font color=#FF0000 size=4><b>程序计数器（PC）—-存放下一条指令的地址</b></font></li><li>指令寄存器（IR）—-存放当前正在执行的指令</li><li>指令译码器———-分析指令中的操作码</li><li>时序部件————控制各部分之间的有序协调</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;暂时还不分类&quot;&gt;&lt;a href=&quot;#暂时还不分类&quot; class=&quot;headerlink&quot; title=&quot;暂时还不分类&quot;&gt;&lt;/a&gt;暂时还不分类&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;font color=#FF0000 size=4&gt;&lt;b&gt;程序计数器（PC）—-存放下一条指令</summary>
+      
+    
+    
+    
+    <category term="日常杂项" scheme="https://0730aa.github.io/categories/%E6%97%A5%E5%B8%B8%E6%9D%82%E9%A1%B9/"/>
+    
+    
+    <category term="网工" scheme="https://0730aa.github.io/tags/%E7%BD%91%E5%B7%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>vivo和iqoo小米红米骁龙天玑单刷基带教程，可修复插卡无信号，降级基带版本.保证锁频功能正常等</title>
@@ -481,26 +506,6 @@
     
     
     <category term="教程" scheme="https://0730aa.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://0730aa.github.io/2023/12/22/hello-world/"/>
-    <id>https://0730aa.github.io/2023/12/22/hello-world/</id>
-    <published>2023-12-22T12:40:12.561Z</published>
-    <updated>2023-12-22T12:40:12.561Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
     
   </entry>
   
