@@ -8,7 +8,7 @@
       <link href="/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/"/>
       <url>/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/</url>
       
-        <content type="html"><![CDATA[<h1 id="暂时还不分类"><a href="#暂时还不分类" class="headerlink" title="暂时还不分类"></a>暂时还不分类</h1><ol><li><font color=#FF0000 size=4><b>程序计数器（PC）—-存放下一条指令的地址</b></font></li><li>指令寄存器（IR）—-存放当前正在执行的指令</li><li>指令译码器———-分析指令中的操作码</li><li>时序部件————控制各部分之间的有序协调</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="cpu-的控制器"><a href="#cpu-的控制器" class="headerlink" title="cpu 的控制器"></a>cpu 的控制器</h1><ol><li><font color=#FF0000 size=4><b>程序计数器（PC）—-存放下一条指令的地址</b></font></li><li>指令寄存器（IR）—-存放当前正在执行的指令</li><li>指令译码器———-分析指令中的操作码</li><li>时序部件————控制各部分之间的有序协调</li></ol><h1 id="数字签名"><a href="#数字签名" class="headerlink" title="数字签名"></a>数字签名</h1><ol><li>A 发送消息 P 给 B 需要用 A 的私钥进行数字签名，即 A 不能抵赖 P 消息不是他发送的，因为 P 消息里面有 A 的私钥，所有抵赖不了。反过来 B 也不能编造或者修改 P</li><li>加密传输：A 加密 P 消息传输给 B，则 A 应该使用 B 的公钥进行加密，B 收到消息后使用 B 的私钥进行解密</li></ol><h1 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h1><ol><li>所有 OSPF 路由器都监听组播地址 224.0.0.5，且在 OSPF 中，只有 DR&#x2F;BDR 监听 224.0.0.6</li><li>所有 RIPv2 路由器都监听的组播地址 224.0.0.9</li><li>所有支持多播的路由器都监听的组播地址 224.0.0.2</li></ol><h1 id="网络管理"><a href="#网络管理" class="headerlink" title="网络管理"></a>网络管理</h1><ol><li>SNMP 使用 UDP 的 161 端口进行 get 或 set 接收报文。162 端口接收 Trap 报文</li></ol>]]></content>
       
       
       <categories>
