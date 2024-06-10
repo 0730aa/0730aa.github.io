@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>安卓 frpc 开机自启动并定时启动（附加热点检测）</title>
+      <link href="/2024/06/10/frpc/"/>
+      <url>/2024/06/10/frpc/</url>
+      
+        <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul><li><strong>本教程需要 root 权限，因为这是一个 magisk 模块</strong></li></ul><h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><ol><li>下载frpc自启动模块（链接放文章末尾）</li><li>下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改里面的 frpc 服务器地址</li><li>热点检测（选开功能）半成品，用于检测<strong>天玑处理器手机</strong>的热点状态，如果检测到关闭，则开启飞行模式 （自己搭配xposededge使用，当开启飞行模式后延时一会自动打开热点）当然使用命令也可以，我懒得弄了，因为我已经弄好xposededge。</li><li>本模块已经下载并配置好一些frpc基础服务，所以你无需再下载 frpc 客户端的压缩包</li><li>热点检测功能目前只有天玑处理器适配，因为手上没有骁龙处理器手机</li></ol><h1 id="模块下载地址"><a href="#模块下载地址" class="headerlink" title="模块下载地址"></a>模块下载地址</h1><ol><li>OneDrive：？</li><li>百度网盘：通过百度网盘分享的文件：frpc自启动_….zip<br>链接：<a href="https://pan.baidu.com/s/1rvwXvzCIiVKGQdzKJw7HWw">https://pan.baidu.com/s/1rvwXvzCIiVKGQdzKJw7HWw</a><br>提取码：qB7N<br>复制这段内容打开「百度网盘APP 即可获取」</li><li>阿里云盘：？</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> frp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网工错误指南</title>
       <link href="/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/"/>
       <url>/2024/03/12/%E7%BD%91%E5%B7%A5%E9%94%99%E8%AF%AF%E6%8C%87%E5%8D%97/</url>
