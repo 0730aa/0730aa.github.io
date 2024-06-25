@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务） | A little</title><meta name="author" content="huang"><meta name="copyright" content="huang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写在前面 本教程需要 root 权限，因为这是一个 magisk 模块  由于上次发版没注意好路径，导致刷入时没有生效。这次更新改好了，并且加入一些热点机比较需要的 adb 端口的开机自启动，还有一些文件传输服务：如 ftp 和 telnet 开始 下载frpc自启动模块（链接放文章末尾）  下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改里面的 frpc 服务器地址和端口">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务） | A little</title><meta name="author" content="huang"><meta name="copyright" content="huang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="写在前面 本教程需要 root 权限，因为这是一个 magisk 模块  由于上次发版没注意好路径，导致刷入时没有生效。这次更新改好了，并且加入一些热点机比较需要的 adb 端口的开机自启动，还有一些文件传输服务：如 ftp 和 telnet 开始 下载frpc自启动模块（链接放文章末尾）  下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改 frp&#x2F;frpc.to">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务）">
 <meta property="og:url" content="http://example.com/2024/06/10/frpc/index.html">
 <meta property="og:site_name" content="A little">
-<meta property="og:description" content="写在前面 本教程需要 root 权限，因为这是一个 magisk 模块  由于上次发版没注意好路径，导致刷入时没有生效。这次更新改好了，并且加入一些热点机比较需要的 adb 端口的开机自启动，还有一些文件传输服务：如 ftp 和 telnet 开始 下载frpc自启动模块（链接放文章末尾）  下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改里面的 frpc 服务器地址和端口">
+<meta property="og:description" content="写在前面 本教程需要 root 权限，因为这是一个 magisk 模块  由于上次发版没注意好路径，导致刷入时没有生效。这次更新改好了，并且加入一些热点机比较需要的 adb 端口的开机自启动，还有一些文件传输服务：如 ftp 和 telnet 开始 下载frpc自启动模块（链接放文章末尾）  下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改 frp&#x2F;frpc.to">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/0730aa/IMAGE@main/2024/June/20240610222450.png">
 <meta property="article:published_time" content="2024-06-10T14:49:00.000Z">
-<meta property="article:modified_time" content="2024-06-18T14:49:00.000Z">
+<meta property="article:modified_time" content="2024-06-25T10:29:00.000Z">
 <meta property="article:author" content="huang">
 <meta property="article:tag" content="frp">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-06-18 22:49:00'
+  postUpdate: '2024-06-25 18:29:00'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -174,16 +174,18 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
-})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/0730aa/IMAGE@main/2024/June/5665e2ea6708878b71332ab63cf490ad_720.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/0730aa/IMAGE@main/2024/June/20240610222450.png')"><nav id="nav"><span id="blog-info"><a href="/" title="A little"><span class="site-name">A little</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-10T14:49:00.000Z" title="发表于 2024-06-10 22:49:00">2024-06-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-18T14:49:00.000Z" title="更新于 2024-06-18 22:49:00">2024-06-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/">教程分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">772</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul>
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/0730aa/IMAGE@main/2024/June/5665e2ea6708878b71332ab63cf490ad_720.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/0730aa/IMAGE@main/2024/June/20240610222450.png')"><nav id="nav"><span id="blog-info"><a href="/" title="A little"><span class="site-name">A little</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-10T14:49:00.000Z" title="发表于 2024-06-10 22:49:00">2024-06-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-25T10:29:00.000Z" title="更新于 2024-06-25 18:29:00">2024-06-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/">教程分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">915</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="安卓frp模块开机自启动并定时启动（附加热点检测，adb端口，ftp服务，telnet服务）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul>
 <li><strong>本教程需要 root 权限，因为这是一个 magisk 模块</strong></li>
 </ul>
 <p><strong>由于上次发版没注意好路径，导致刷入时没有生效。这次更新改好了，并且加入一些热点机比较需要的 adb 端口的开机自启动，还有一些文件传输服务：如 ftp 和 telnet</strong></p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
 <li><p>下载frpc自启动模块（链接放文章末尾）</p>
 </li>
-<li><p>下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改里面的 frpc 服务器地址和端口</p>
+<li><p>下载完之后不要马上刷入，先把里面的 readme.md 看完，重点是修改 frp&#x2F;frpc.toml 里面的 frpc 服务器地址和端口</p>
 </li>
 <li><p>adb，ftp，telnet 服务开启只需在 config.json 里设置就好（默认全部打开）</p>
+</li>
+<li><p>cron 定时规则也在 config.json 里面配置</p>
 </li>
 <li><p>热点检测（选开功能）半成品，用于检测<strong>天玑处理器手机</strong>的热点状态，如果检测到关闭，则开启飞行模式 （自己搭配xposededge使用，当开启飞行模式后延时一会自动打开热点）当然使用命令也可以，我懒得弄了，因为我已经弄好xposededge。</p>
 </li>
@@ -199,27 +201,71 @@
 </li>
 <li><p><strong>hotspot_status.sh 是热点状态检测。效果：当检测到热点关闭时，会触发开启飞行模式并在模块目录的 log 下生成一个 log 文件:当热点打开时，不做任何动作，只输出日志 log</strong></p>
 </li>
+<li><p><strong>本模块内置了 jq 工具来读取处理 json 文件，更多详情前往 <a target="_blank" rel="noopener" href="https://github.com/jqlang/jq">https://github.com/jqlang/jq</a> 查看</strong></p>
+</li>
+<li><p><strong>模块电脑编辑有 bug 还是格式问题不知道，编辑后导致刷入时显示 error unzip 。所以请在安卓手机上编辑。</strong></p>
+</li>
+<li><p><strong>frpc 更多特性详情查看官网 <a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">https://github.com/fatedier/frp</a></strong></p>
+</li>
 </ul>
 <h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><ul>
+<li><p><strong>frpc自启动v4.2</strong></p>
+<ul>
+<li>修正 readme</li>
+</ul>
+</li>
+<li><p><strong>frpc自启动v3.9</strong></p>
+<ul>
+<li>更新 frpc 到 v0.58.1</li>
+<li>修正 readme</li>
+</ul>
+</li>
+<li><p><strong>frpc自启动v3.7</strong></p>
+<ul>
+<li>引入 jq 工具检索 config</li>
+<li>config 文件配置新增定时规则设置</li>
+<li>新增 cron_update</li>
+<li>新增 service log 日志输出</li>
+</ul>
+</li>
 <li><p><strong>frpc自启动v3.1</strong></p>
-<p> 修改部分文件名和路径<br> 完善模块一些相关说明<br> 精简部分脚本内容</p>
+<ul>
+<li>修改 magisk 模块的一些书写格式</li>
+<li>修改部分文件名和路径</li>
+<li>完善模块一些相关说明</li>
+<li>精简部分脚本内容</li>
+</ul>
 </li>
 <li><p><strong>frpc自启动v2.6</strong></p>
-<p> 修复了本模块 magisk 的更新逻辑<br> 一键启动脚本中将禁用打瞌睡模式的功能注释掉 </p>
+<ul>
+<li>修复了本模块 magisk 的更新逻辑</li>
+<li>一键启动脚本中将禁用打瞌睡模式的功能注释掉</li>
+</ul>
 </li>
 <li><p><strong>frpc自启动v2.4</strong></p>
-<p> 修正文件路径<br> 添加 config.json 和 adb.sh 配置文件<br> 添加 log 路径，log 不再输出到内存目录下，而是模块的 log 目录下对应文件<br> 添加 adb端口开启，ftp 开启，telent 开启的功能</p>
+<ul>
+<li>修正文件路径</li>
+<li>添加 config.json 和 adb.sh 配置文件</li>
+<li>添加 log 路径，log 不再输出到内存目录下，而是模块的 log 目录下对应文件</li>
+<li>添加 adb端口开启，ftp 开启，telent 开启的功能</li>
+</ul>
 </li>
 <li><p><strong>frpc自启动v1.0（已废弃，路径没改）</strong></p>
-<p> 配置 frpc 功能<br> 写入常用 frpc 端口<br> 添加热点检测功能</p>
+<ul>
+<li>配置 frpc 功能</li>
+<li>写入常用 frpc 端口</li>
+<li>添加热点检测功能</li>
+</ul>
 </li>
 </ul>
-<h2 id="模块下载地址"><a href="#模块下载地址" class="headerlink" title="模块下载地址"></a>模块下载地址</h2><ol>
+<h2 id="模块下载地址"><a href="#模块下载地址" class="headerlink" title="模块下载地址"></a>模块下载地址</h2><ol start="0">
+<li><p>GitHub：<a target="_blank" rel="noopener" href="https://github.com/0730aa/hotspot">https://github.com/0730aa/hotspot</a></p>
+</li>
 <li><p>OneDrive：？由于没有过硬的技术，没能绕过微软检测，所以分享不了，下载也不行</p>
 </li>
 <li><p>蓝奏云：<a target="_blank" rel="noopener" href="https://wwm.lanzouo.com/b00g2dgwmd">https://wwm.lanzouo.com/b00g2dgwmd</a>    密码：投币</p>
 </li>
-<li><p>百度网盘：通过百度网盘分享的文件：frpc自启动_….zip<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1mJGZLaf0vuV3Q4iC0meWcA">https://pan.baidu.com/s/1mJGZLaf0vuV3Q4iC0meWcA</a><br>提取码：te1n<br>复制这段内容打开「百度网盘APP 即可获取」</p>
+<li><p>百度网盘：太慢了不敢恭维</p>
 </li>
 <li><p>阿里云盘：？由于不知名原因，阿里分享显示不能分享此类文件？</p>
 </li>
